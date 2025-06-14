@@ -1,4 +1,4 @@
-let sendUrl = document.getElementById("urlShort") as HTMLButtonElement;
+let sendUrl = document.getElementById("urlBtn") as HTMLButtonElement;
 let urlInput = document.getElementById("userUrl") as HTMLTextAreaElement;
 
 import Toastify from 'toastify-js'

@@ -4,14 +4,29 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/styles/style.css">
     <title>Url shortener</title>
   </head>
   <body>
-    <div id="main">
-      <textarea class="urlInput" name="url" id="userUrl"></textarea>
-      <button class="urlShort" id="urlShort" disabled>get my url</button>
-    </div>
+    <nav class="topBar">
+      <div class="logo">
+        <img src="src/typescript.svg" alt="logo">
+      </div>
+      <div class="barItems">
+          <a href="">
+            public url's
+          </a>
+          <a href="">
+            about
+          </a>
+      </div>
+    </nav>
+    <main class="content" id="main">
+      <div class="contentInput">
+              <input class="urlInput" name="url" id="userUrl">
+              <button class="urlBtn" id="urlBtn" disabled>Get my url</button>
+      </div>
+    </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
