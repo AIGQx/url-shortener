@@ -2,16 +2,22 @@
   color-scheme: light dark;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+body {
+  margin: 0;
+  padding: 0; 
+}
 .topBar {
-  width: 100dvh;
-  margin: 0 50vh 0;
+  width: 50%;
+  margin: 15px auto 0; /* 'auto' centers the nav bar horizontally */
   display: flex;
   align-items: center;
   position: absolute;
+  left: 50%; 
+  transform: translateX(-50%);
   padding: 12px;
   border-radius: 12px;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: #222222;
 }
 .logo {
   margin-left: 10px;
@@ -21,10 +27,23 @@
 }
 .barItems > *{
   text-decoration: none;
+  color: #fff;
   margin: 10px;
-  background-color: rgb(0, 0, 0);
-  padding: 10px;
+  background-color: rgb(85, 85, 85);
+  padding: 9px;
   border-radius: 12px;
+}
+@media (max-width: 767px) {
+  .topBar {
+    width: 90%; /* Adjust the width as needed for small screens */
+      align-items: center;
+  }
+  .topBar > * {
+    margin: 0 5px; /* Adjust the margin for smaller screens */
+  }
+  .barItems > * {
+    margin: 5px; /* Adjust the margin for smaller screens */
+  }
 }
 .content {
   display: flex;
@@ -36,10 +55,19 @@
 .contentInput{
   display: flex;
   height: 100svh;
+  width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 20px;
+}
+.urlInput{
+  text-overflow: ellipsis;
+  width: 400px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
 }
 .urlBtn {
   padding: 10px;
@@ -54,7 +82,6 @@
   transition: .5s;
   background-color: lightblue;
   color: #000;
-
 }
 .toastAlert {
   border-radius: 12px;
