@@ -1,6 +1,6 @@
-let sendUrl = document.getElementById("urlBtn") as HTMLButtonElement;
-let urlInput = document.getElementById("userUrl") as HTMLTextAreaElement;
-
+const sendUrl: HTMLButtonElement = document.getElementById("urlBtn") as HTMLButtonElement;
+const urlInput: HTMLInputElement = document.getElementById('userUrl') as HTMLInputElement;
+const urlSHort: HTMLInputElement = document.getElementById('urlShort') as HTMLInputElement;
 import Toastify from 'toastify-js'
 import "toastify-js/src/toastify.css"
 
@@ -37,6 +37,14 @@ function shortUrl() {
     }
   }
 }
+
+urlSHort.addEventListener('click', (event: Event) => {
+  console.log((event.target as HTMLInputElement).value)
+})
+
+urlInput.addEventListener('blur', (event: Event) => {
+(event.target as HTMLInputElement).selectionEnd = 0
+})
 
 urlInput.addEventListener('keyup', () => {
   if(urlInput.value === ""){
