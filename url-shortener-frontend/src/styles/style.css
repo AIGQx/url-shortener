@@ -90,23 +90,42 @@ body {
   background-color: lightblue;
   color: #000;
 }
-.urlShort {
-  cursor: pointer;
+.urlGen > *{
   margin-top: 50px;
-  text-overflow: ellipsis;
   width: 350px;
   height: 40px;
+}
+.urlShort {
+  cursor: pointer;
+  text-overflow: ellipsis;
   text-align: center;
-  border-style: none;
-  background-color: transparent;
+  border: none;
   font-size: 16px;
   font-weight: lighter;
+  box-sizing: border-box;
   border-radius: 12px;
+  background-color: #fff;
 }
-.urlShort:hover {
+.urlCopy {
+  opacity: 0%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 12px;
+  color: #fff;
+  background-color: rgb(80, 80, 80);
+  border: 1px solid #222831;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  }
+.urlCopy:hover {
+  user-select: none;
+  cursor: pointer;
   transition: .5s;
-
-  background-color: rgb(255, 255, 255);
+  opacity: 100%;
 }
 .toastAlert {
   border-radius: 12px;

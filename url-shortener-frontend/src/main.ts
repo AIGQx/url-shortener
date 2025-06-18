@@ -1,6 +1,7 @@
 const sendUrl: HTMLButtonElement = document.getElementById("urlBtn") as HTMLButtonElement;
 const urlInput: HTMLInputElement = document.getElementById('userUrl') as HTMLInputElement;
 const urlSHort: HTMLInputElement = document.getElementById('urlShort') as HTMLInputElement;
+const urlCopy: HTMLSpanElement = document.getElementById('urlCopy') as HTMLSpanElement;
 import Toastify from 'toastify-js'
 import "toastify-js/src/toastify.css"
 
@@ -41,7 +42,13 @@ function shortUrl() {
 urlSHort.addEventListener('click', (event: Event) => {
   console.log((event.target as HTMLInputElement).value)
 })
-
+urlCopy.addEventListener('click', () => {
+  navigator.clipboard.writeText(urlSHort.value);
+  urlCopy.style.backgroundColor = '#fff';
+})
+urlCopy.addEventListener('mouseleave', () => {
+  urlCopy.style.backgroundColor = 'rgb(80, 80, 80)'
+})
 urlInput.addEventListener('blur', (event: Event) => {
 (event.target as HTMLInputElement).selectionEnd = 0
 })
