@@ -55,7 +55,7 @@ urlInput.addEventListener('blur', (event: Event) => {
 
 urlInput.addEventListener('keyup', () => {
   if(urlInput.value === ""){
-     sendUrl.disabled=true;
+    sendUrl.disabled=true;
   }
   else{
     sendUrl.disabled=false;
