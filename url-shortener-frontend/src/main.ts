@@ -12,6 +12,16 @@ function shortUrl() {
     try {
       new URL(urlText)
       //continue
+      fetch('http://localhost:3000/shorten', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ url: urlText })
+      })
+      .then(response => response.json())
+      .then(data => {
+        urlSHort.value = data.shortUrl;
       Toastify({
         text: "generating your link...",
         gravity: "bottom",
@@ -22,7 +32,7 @@ function shortUrl() {
           background: "green"
         }
       }).showToast();
-
+      })
     } catch (error) {
       //catch the error
       Toastify({
