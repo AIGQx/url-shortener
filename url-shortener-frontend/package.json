@@ -1,7 +1,7 @@
 {
   "name": "url-shortener",
   "private": true,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "typescript": "~5.8.3",
-    "vite": "^7.0.2"
+    "vite": "^7.0.4"
   },
   "dependencies": {
     "@types/toastify-js": "^1.12.4",
