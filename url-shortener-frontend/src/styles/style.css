@@ -1,10 +1,18 @@
-:root{
-  background-color: #222831;
+:root,
+:host {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 body {
+ 
+  background-color: var(--md-sys-color-background);
   margin: 0;
-  padding: 0; 
+  padding: 0;
+}
+.theme-select > img {
+  display: block;
+  margin: auto;
+  height: auto;
 }
 .topBar {
   width: 50%;
@@ -12,47 +20,40 @@ body {
   display: flex;
   align-items: center;
   position: absolute;
-  left: 50%; 
+  left: 50%;
   transform: translateX(-50%);
   padding: 12px;
   border-radius: 12px;
   justify-content: space-between;
-  background-color: #393E46;
+  background-color: var(--md-sys-color-surface-container);
 }
+
 .logo {
+  align-items: center;
+  align-content: center;
   margin-left: 10px;
   width: 30px;
-  padding:  0 5px;
-  border-radius: 12px;
-  background-image: radial-gradient(circle at 50% 50%, #00ADB5, #393E46);
+  padding: 0 5px;
 }
+
 .logo img {
   width: 100%;
+  display: block;
+  margin: auto;
   height: auto;
 }
+
 .barItems {
   border-radius: 12px;
 }
-.barItems > *{
+
+.barItems>* {
   text-decoration: none;
-  color: #fff;
   margin: 10px;
-  background-color: #222831;
   padding: 9px;
   border-radius: 12px;
 }
-@media (max-width: 767px) {
-  .topBar {
-    width: 90%; /* Adjust the width as needed for small screens */
-      align-items: center;
-  }
-  .topBar > * {
-    margin: 0 5px; /* Adjust the margin for smaller screens */
-  }
-  .barItems > * {
-    margin: 5px; /* Adjust the margin for smaller screens */
-  }
-}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -60,7 +61,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-.contentInput{
+
+.containerInput {
   display: flex;
   height: 100svh;
   width: 100%;
@@ -69,41 +71,52 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+.contentInput {
+  background-color: var(--md-sys-color-surface-container);
+  height: 80svh;
+  margin-top: 100px;
+  width: 70%;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .urlText {
-  color: #fff;
   font-weight: bolder;
 }
-.urlInput{
+
+.urlInput {
   text-overflow: ellipsis;
   text-align: center;
   width: 500px;
-  height: 40px;
+  height: 50px;
   padding: 10px;
   border-radius: 9px;
   border-style: none;
-  background-color: #6b6b6b;
   font-size: 24px;
-  color: #fff;
 }
+
 .urlBtn {
   padding: 10px;
   border-radius: 12px;
   border: none;
   font-size: 16px;
 }
-.urlBtn:disabled {
-  color: #fff;
-}
+
+.urlBtn:disabled {}
+
 .urlBtn:hover:enabled {
   transition: .5s;
-  background-color: lightblue;
-  color: #000;
+
 }
-.urlGen > *{
+
+.urlGen>* {
   margin-top: 50px;
   width: 350px;
   height: 40px;
 }
+
 .urlShort {
   cursor: pointer;
   text-overflow: ellipsis;
@@ -115,6 +128,7 @@ body {
   border-radius: 12px;
   background-color: #fff;
 }
+
 .urlCopy {
   opacity: 0%;
   display: inline-flex;
@@ -124,18 +138,39 @@ body {
   font-size: 16px;
   border-radius: 12px;
   color: #fff;
-  background-color: rgb(80, 80, 80);
-  border: 1px solid #222831;
   position: absolute;
   right: 50%;
   transform: translateX(50%);
-  }
+}
+
 .urlCopy:hover {
   user-select: none;
   cursor: pointer;
   transition: .5s;
   opacity: 100%;
 }
+
 .toastAlert {
   border-radius: 12px;
+}
+
+@media (max-width: 767px) {
+  .topBar {
+    width: 90%;
+    align-items: center;
+  }
+
+  .topBar>* {
+    margin: 0 5px;
+  }
+
+  .barItems>* {
+    margin: 5px;
+  }
+
+  .urlInput {
+    width: 350px;
+    height: 30px;
+    font-size: 20px;
+  }
 }

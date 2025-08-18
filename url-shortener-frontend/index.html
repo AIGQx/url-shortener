@@ -1,33 +1,41 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/styles/style.css">
-    <title>Url shortener</title>
-  </head>
-  <body>
-    <nav class="topBar">
-      <div class="logo">
-        <img src="/logo.svg" alt="logo">
-      </div>
-      <div class="barItems">
-          <a href="">
-            about
-          </a>
-      </div>
-    </nav>
-    <main class="content" id="main">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/styles/style.css">
+  <script src="src/main.ts"></script>
+  <title>Url shortener</title>
+</head>
+
+<body>
+  <nav class="topBar">
+    <div class="logo">
+      <img src="/logo.svg" alt="logo">
+    </div>
+    <div class="barItems">
+      <md-filled-button href="">
+        about
+      </md-filled-button>
+      <md-filled-button class="theme-select" id="theme"><img src="/palette.svg"></md-filled-button>
+    </div>
+  </nav>
+  <main class="content" id="main">
+    <div class="containerInput">
       <div class="contentInput">
-              <input class="urlInput" name="url" id="userUrl" placeholder="Type your URL">
-              <button class="urlBtn" id="urlBtn" disabled>Get my URL</button>
-              <div class="urlGen">
-                <input class="urlShort" type="text" id="urlShort" readonly placeholder="Your short URL will appear here">
-                <span class="urlCopy" id="urlCopy">CLICK TO COPY!</span>
-              </div>
+        <md-outlined-text-field class="urlInput" name="url" id="userUrl" placeholder="Type your URL">
+          <button class="urlBtn" id="urlBtn" disabled>Get my URL</button>
+          <div class="urlGen">
+            <input class="urlShort" type="text" id="urlShort" readonly placeholder="Your short URL will appear here">
+            <span class="urlCopy" id="urlCopy">CLICK TO COPY!</span>
+          </div>
       </div>
-    </main>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    </div>
+  </main>
+  <script type="module" src="/src/request.ts"></script>
+  <script type="module" src="/src/theme.ts"></script>
+</body>
+
 </html>
