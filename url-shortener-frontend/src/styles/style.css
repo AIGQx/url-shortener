@@ -14,8 +14,9 @@ body {
   margin: auto;
   height: auto;
 }
-.topBar {
-  width: 50%;
+  .topBar {
+  width: 95%;
+  border-radius: 12px;
   margin: 15px auto 0;
   display: flex;
   align-items: center;
@@ -23,9 +24,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   padding: 12px;
-  border-radius: 12px;
   justify-content: space-between;
-  background-color: var(--md-sys-color-surface-container);
+  /* background-color: var(--md-sys-color-surface-container); */
 }
 
 .logo {
@@ -75,10 +75,11 @@ body {
   background-color: var(--md-sys-color-surface-container);
   height: 80svh;
   margin-top: 100px;
-  width: 70%;
+  width: 95%;
   border-radius: 12px;
   padding: 12px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -87,6 +88,7 @@ body {
 }
 
 .urlInput {
+  color: #fff;
   text-overflow: ellipsis;
   text-align: center;
   width: 500px;
@@ -104,7 +106,7 @@ body {
   font-size: 16px;
 }
 
-.urlBtn:disabled {}
+
 
 .urlBtn:hover:enabled {
   transition: .5s;
@@ -126,7 +128,7 @@ body {
   font-weight: lighter;
   box-sizing: border-box;
   border-radius: 12px;
-  background-color: #fff;
+  background-color: var(--md-sys-color-surface-container);
 }
 
 .urlCopy {
@@ -154,7 +156,7 @@ body {
   border-radius: 12px;
 }
 
-@media (max-width: 767px) {
+/* @media (min-width: 360px) {
   .topBar {
     width: 90%;
     align-items: center;
@@ -162,7 +164,7 @@ body {
 
   .topBar>* {
     margin: 0 5px;
-  }
+  } 
 
   .barItems>* {
     margin: 5px;
@@ -173,4 +175,10 @@ body {
     height: 30px;
     font-size: 20px;
   }
-}
+} */
+/* @media (min-width: 768px) {
+  .topBar {
+    width: 70%;
+    height: 50px;
+  }
+} */
